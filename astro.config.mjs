@@ -7,5 +7,5 @@ export default defineConfig({
   experimental: {
     viewTransitions: true
   },
-  integrations: [tailwind(), compress(), jopSoftwarecookieconsent()]
+  integrations: [tailwind(), compress()]
 });
