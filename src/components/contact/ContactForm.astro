@@ -2,24 +2,60 @@
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="grid gap-12 lg:grid-cols-2 lg:gap-8">
       <div class="flex flex-col gap-4 sm:gap-6">
-        <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Let's work together</h2>
+        <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Let’s Craft Something Amazing Together!
+        </h2>
         <p class="text-primary-950/70 dark:text-primary-200/70 max-w-lg text-lg sm:text-xl">
-          We'd love to learn more about you and what we can build together.
+          Curious about how we collaborate to create planet-centric solutions? Whether you have a wild idea or need guidance on your project, we are all ears! Fill out the form below, and let’s embark on this creative journey together.</p>
+        <p class="text-primary-950/70 dark:text-primary-200/70 max-w-lg text-lg sm:text-xl">
+        Your insights are the blueprint for our next big adventure!
         </p>
       </div>
-      <form action="#" method="POST" class="mt-3 flex flex-col gap-y-6">
-        <!-- Full name input -->
+      <form action="https://api.web3forms.com/submit" method="POST" id="form" class="mt-3 flex flex-col gap-y-6"   class="needs-validation"  data-astro-reload
+      novalidate>
+      <input type="hidden" name="access_key" value="20b09f8f-8455-49dc-b6af-fb30bda311c3" />
+        <!-- Name input -->
         <div>
-          <label for="full-name" class="sr-only">Full name</label>
+          <label for="name" class="sr-only">Name</label>
           <input
             type="text"
-            name="full-name"
-            id="full-name"
+            name="name"
+            id="name"
             autocomplete="name"
             class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
-            placeholder="Full name"
+            placeholder="Name"
           />
         </div>
+        <!-- Budget input -->
+<div>
+  <label for="budget" class="sr-only">Budget</label>
+  <select
+    name="budget"
+    id="budget"
+    class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
+  >
+    <option value="" disabled selected>Select your budget</option>
+    <option value="below-500">Below 600 €</option>
+    <option value="500-1000">600 - 1.000 €</option>
+    <option value="1000-5000">1.000 - 5.000 €</option>
+    <option value="5000-10000">5.000 - 10.000 €</option>
+    <option value="above-10000">Above 10.000 €</option>
+  </select>
+</div>
+<!-- Project delivery priority input -->
+<div>
+  <label for="delivery-priority" class="sr-only">Delivery Priority</label>
+  <select
+    name="delivery-priority"
+    id="delivery-priority"
+    class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
+  >
+    <option value="" disabled selected>Select delivery priority</option>
+    <option value="immediate">Immediate Impact</option>
+    <option value="short-term">Short-Term Impact</option>
+    <option value="medium-term">Medium-Term Impact</option>
+    <option value="long-term">Long-Term Impact</option>
+  </select>
+</div>
 
         <!-- Email input -->
         <div>
@@ -44,13 +80,32 @@
             class="hover:ring-primary-600 focus:ring-primary-600 dark:hover:ring-primary-400 dark:focus:ring-primary-400 bg-primary-50 dark:bg-primary-950 ring-primary-900/40 dark:ring-primary-200/40 placeholder:text-primary-950/60 dark:placeholder:text-primary-200/60 block w-full appearance-none rounded-md border-0 px-4 py-4 text-base ring-1 transition focus:outline-none focus:ring-2"
             placeholder="Message"></textarea>
         </div>
+        <style>
+          .privacy-link {
+            text-decoration: underline; /* Subraya el enlace */
+            color: blue; /* Cambia el color del texto del enlace */
+            font-weight: bold; /* Hace que el texto sea más grueso */
+          }
+        
+          .privacy-link:hover {
+            color: darkblue; /* Cambia el color cuando el mouse pasa sobre el enlace */
+          }
+        </style>
+        
+        <label>
+          <input type="checkbox" id="privacyCheckbox" />
+          I have read and accept the
+          <a href="https://arielcdn.co/politicpvcy" target="_blank" rel="noopener noreferrer" class="privacy-link">
+            Privacy Policy
+          </a>
+        </label>
 
         <div>
           <button
             class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             type="submit"
           >
-            Submit
+          Launch!
           </button>
         </div>
       </form>
