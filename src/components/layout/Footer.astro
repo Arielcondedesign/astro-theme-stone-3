@@ -33,11 +33,12 @@ const bottomLinks = [
         href: '/about',
         isExternal: false,
       },
-      {
+      /* {
         name: 'Pricing',
         href: '/pricing',
         isExternal: false,
       },
+      */
       {
         name: 'Contact',
         href: '/contact',
@@ -49,18 +50,18 @@ const bottomLinks = [
     header: 'Legal',
     links: [
       {
-        name: 'Privacy',
+        name: 'Cookies policy',
+        href: '/cookies',
+        isExternal: false,
+      },
+      {
+        name: 'Legal notice',
+        href: '/legal',
+        isExternal: false,
+      },
+      {
+        name: 'Privacy policy',
         href: '/privacy',
-        isExternal: false,
-      },
-      {
-        name: '404',
-        href: '/404',
-        isExternal: false,
-      },
-      {
-        name: 'Styleguide',
-        href: '/styleguide',
         isExternal: false,
       },
     ],
@@ -81,11 +82,10 @@ const bottomLinks = [
           width="65"
           height="40"
           :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
-          alt="Stone"
+          alt="Ariel Conde Logo Footer - Digital Conscious Design"
         />
         <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
-          Stone is a premium Astro theme specially designed for Business, Marketing, SaaS and
-          Startup websites.
+          Make your digital product be simple but significant
         </p>
         <p class="text-primary-950/70 dark:text-primary-200/70 text-sm">© 2024 Ariel Conde</p>
       </div>
@@ -127,9 +127,16 @@ const bottomLinks = [
       </div>
     </div>
   </div>
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+  <div class="flex justify-left mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8 gap-4">
     <a href="https://www.thegreenwebfoundation.org/" target="_blank" rel="noopener noreferrer">
-      <img src="https://app.greenweb.org/api/v3/greencheckimage/arielcnd.com?nocache=true" alt="This website runs on green hosting - verified by thegreenwebfoundation.org" width="200px" height="95px">
+        <img src="https://app.greenweb.org/api/v3/greencheckimage/arielcnd.com?nocache=true" alt="This website runs on green hosting - verified by thegreenwebfoundation.org" width="200px" height="95px">
     </a>
-  </div>
+    <a href="https://regeneralia.com/?utm_source=acndportfolio&utm_medium=footer&utm_campaign=ref" target="_blank" rel="noopener noreferrer">
+        <img
+            class="h-auto w-auto"
+            :src="$store.theme.isDark ? '/assets/arielcnd-web-carbon-score-dark.svg' : '/assets/arielcnd-web-carbon-score-light.svg'"
+            alt="Regeneralia Badge - verified web carbon score A+"
+        />
+    </a>
+</div>
 </footer>
