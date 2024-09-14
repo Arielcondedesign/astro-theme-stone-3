@@ -44,6 +44,12 @@ const { description, title } = Astro.props;
     <script>
       import Alpine from 'alpinejs';
       import collapse from '@alpinejs/collapse';
+      import Hotjar from '@hotjar/browser';
+
+const siteId = 5122615;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 
       Alpine.plugin(collapse);
 
