@@ -1,4 +1,14 @@
 ---
+import * as Hotjar from '@hotjar/browser';
+
+const siteId = 5122615;
+const hotjarVersion = 6;
+
+// Inicializa Hotjar
+if (typeof window !== 'undefined') {
+  Hotjar.init(siteId, hotjarVersion);
+}
+
 const links = [
   {
     ref: '01',
