@@ -1,14 +1,4 @@
 ---
-import * as Hotjar from '@hotjar/browser';
-
-const siteId = 5122615;
-const hotjarVersion = 6;
-
-// Inicializa Hotjar
-if (typeof window !== 'undefined') {
-  Hotjar.init(siteId, hotjarVersion);
-}
-
 const links = [
   {
     ref: '01',
@@ -182,6 +172,17 @@ const links = [
             </a>
           ))
         }
+        <!-- Hotjar Tracking Code for Portfolio -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:5122615,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
       </nav>
     </div>
   </div>
