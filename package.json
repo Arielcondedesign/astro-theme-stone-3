@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@alpinejs/collapse": "3.12.3",
+    "@astrojs/mdx": "^3.1.7",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/inter": "5.0.8",
     "@hotjar/browser": "^1.0.9",
+    "@traders/google-analytics": "^0.1.0",
     "@types/alpinejs": "3.7.2",
     "alpinejs": "3.12.3",
     "astro": "4.14",

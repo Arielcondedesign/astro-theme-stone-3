@@ -5,6 +5,7 @@ import Cookies from 'js-cookie';
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
+import GA4 from '@traders/google-analytics/components/GA4.astro';
 
 interface Props {
   description: string;
@@ -28,29 +29,27 @@ const { description, title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body
-    class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"
-  >
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+  <body class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition">
+      <GA4 gtagId='G-SQHVPXCBWK' />
+      <Header />
+      <main>        <slot />
+      </main>
+      <Footer />
     <style is:global>
       [x-cloak] {
         display: none !important;
       }
     </style>
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="60961a70-3efc-4524-89e6-e206d9663c79"  type="text/javascript"></script>
-<script>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="60961a70-3efc-4524-89e6-e206d9663c79" type="text/javascript"></script>
+    <script>
       import Alpine from 'alpinejs';
       import collapse from '@alpinejs/collapse';
       import Hotjar from '@hotjar/browser';
 
-const siteId = 5122615;
-const hotjarVersion = 6;
+      const siteId = 5122615;
+      const hotjarVersion = 6;
 
-Hotjar.init(siteId, hotjarVersion);
+      Hotjar.init(siteId, hotjarVersion);
 
       Alpine.plugin(collapse);
 
