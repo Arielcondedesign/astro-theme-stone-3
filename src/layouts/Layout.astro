@@ -5,7 +5,6 @@ import Cookies from 'js-cookie';
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/layout/Footer.astro';
 import Header from '../components/layout/Header.astro';
-import GA4 from '@traders/google-analytics/components/GA4.astro';
 
 interface Props {
   description: string;
@@ -30,7 +29,9 @@ const { description, title } = Astro.props;
     <ViewTransitions />
   </head>
   <body class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition">
-      <GA4 gtagId='G-SQHVPXCBWK' />
+<!-- 100% privacy-first analytics -->
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
       <Header />
       <main>        <slot />
       </main>
