@@ -1,0 +1,91 @@
+---
+import '@fontsource/dm-sans/latin-ext-300.css';
+import '@fontsource/dm-sans/latin-ext-600.css';
+import Cookies from 'js-cookie';
+import { ViewTransitions } from 'astro:transitions';
+import Footer from '../components/layout/Footer.astro';
+import Header from '../components/layout/Header.astro';
+
+interface Props {
+description: string;
+title: string;
+}
+
+const { description, title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" x-cloak x-data="{ 'dark': $store.theme.isDark }">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <!-- Favicon and icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    
+    <ViewTransitions />
+</head>
+<body class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition">
+    <!-- Privacy-first analytics -->
+    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript>
+        <img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" />
+    </noscript>
+
+    <Header />
+    
+    <main class="px-16">
+        <slot />
+    </main>
+    
+    <Footer />
+    
+    <style is:global>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+    
+    <!-- Cookie consent script -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="60961a70-3efc-4524-89e6-e206d9663c79" type="text/javascript"></script>
+    
+    <script>
+        import Alpine from 'alpinejs';
+        import collapse from '@alpinejs/collapse';
+        import Hotjar from '@hotjar/browser';
+
+        // Initialize Hotjar
+        const siteId = 5122615;
+        const hotjarVersion = 6;
+        Hotjar.init(siteId, hotjarVersion);
+
+        // Initialize Alpine.js
+        Alpine.plugin(collapse);
+        Alpine.store('theme', {
+            init() {
+                this.isDark = (() => {
+                    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+                        return localStorage.getItem('theme') === 'dark';
+                    }
+                    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+                })();
+            },
+            isDark: false,
+            toggle() {
+                this.isDark = !this.isDark;
+                localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
+            },
+        });
+
+        window.Alpine = Alpine;
+        Alpine.start();
+    </script>
+</body>
+</html>

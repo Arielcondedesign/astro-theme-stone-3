@@ -1,7 +1,6 @@
 ---
 title: 'hola pepsicola'
-layout: '../layouts/layout.astro'
-
+layout: '../layouts/layout-legal.astro'
 ---
 
 # Legal Notice · Ariel Conde Portfolio
