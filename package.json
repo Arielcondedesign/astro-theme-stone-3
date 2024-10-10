@@ -21,7 +21,7 @@
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@types/alpinejs": "3.7.2",
     "alpinejs": "3.12.3",
-    "astro": "4.14",
+    "astro": "^4.16.0",
     "astro-compress": "^2.3.1",
     "astro-hotjar": "^1.0.1",
     "prettier": "3.0.2",
