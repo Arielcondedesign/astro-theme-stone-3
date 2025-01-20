@@ -1,0 +1,59 @@
+---
+const caseStudy = {
+  summary: "No tinc text de moment",
+  design: "Key Design Decisions: We opted for a clean, modern design that highlights the products (includes images of the final design). UI/UX Choices Rationale: Usability and visual aesthetics were prioritized to appeal to a younger audience.",
+  result: "In order to evaluate the performance of the design changes, three key metrics were mainly established, read with the objectives. the bounce rate, the conversion rate, the session time, the number of pages visited. Customer or user feedback: Users praised the new shopping experience and ease of navigation. Business Impact: The redesign contributed to a significant increase in sales and customer retention.",
+  learn: "At the beginning of the project, I think I spent too much time researching, researching references, and benchmarking. It is true that the extraction of analytical data made us rethink and question the client's premise that it could only grow by attracting a younger audience. It is not easy to offer a tailored user experience; I tried to base it on sizes and standards that I thought would work, so that the programmer could then apply the style pages I sent him.",
+  techs: [
+    "Shopify",
+"Hotjar",
+"Figma (to prototype flows and scrolls)",
+"Proximal UX (for qualitative validation)",
+"Google Analytics (for quantitative data extraction)",
+"Shopify Analytics (for quantitative data extraction)"
+  ]
+};
+
+const imagePath = "/assets/PeopleOfLeisure_ResponsiveDesign_ArielConde_2021.webp";
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-8 lg:gap-12">
+        <h2 class="text-lg font-medium tracking-tight sm:text-2xl">{caseStudy.summary}</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        <div class="col-span-2 grid gap-8 sm:grid-cols-2">
+          <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+            <h3 class="text-xl font-medium">Final Design</h3>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+              {caseStudy.design}
+            </p>
+          </div>
+          <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+            <h3 class="text-xl font-medium">Results</h3>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+              {caseStudy.result}
+            </p>
+          </div>
+          <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+            <h3 class="text-xl font-medium">Learnings</h3>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+              {caseStudy.learn}
+            </p>
+          </div>
+          <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+            <h3 class="text-xl font-medium">Technologies and Tools Used</h3>
+            <ul class="text-primary-950/70 dark:text-primary-200/70 text-base list-disc pl-5">
+              {caseStudy.techs.map(tech => (
+                <li>{tech}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <img src={imagePath} alt="Case Study Illustration" class="rounded-3xl object-cover w-full h-full" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

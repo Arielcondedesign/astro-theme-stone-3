@@ -1,0 +1,103 @@
+---
+const caseStudy = {
+summary: "Hydro tecnaaaaa doskfkldmdklnfdkl on rates among younger audiences while showcasing sustainable practices and ethical manufacturing. Research revealed a diverse audience valuing quality and sustainability, guiding our design process. 🌱✨ #UX #Sustainability.",
+goals: "The IoT Nexus project set out to create a technology solution that not only implemented technical innovation, but also effectively communicated its added value to end users. The strategy focused on developing a truly user-centric design, where usability and interaction experience were priority elements. Through an intuitive and functional interface, the project aimed to significantly increase the efficiency of agricultural decision-making by transforming complex data into practical and understandable information. The implementation of a fully responsive system would ensure a seamless and consistent experience on both mobile and desktop devices, eliminating traditional technological access barriers. Beyond technical functionality, IoT Nexus set out to deliver a higher level of innovation that would clearly differentiate it from competing solutions, positioning itself as a truly disruptive tool in the agricultural technology ecosystem.",
+ux: "The project research process was developed in an innovative way and with limited resources. Initially, we conducted a competitive benchmark to understand the market share and approaches of similar technology solutions. Given the restricted budget, we adopted a ‘guerrilla’ user research strategy, testing with semi-regular and potential users, including informal interviews with people of various profiles on the street. A key element of the methodology was the use of the SUS (System Usability Scale) test, a standardised tool for assessing the usability of applications. Using this methodology, we systematically iterated the design of the mobile application, identifying: 01) Ranges of improvement in the user experience. 02) Confusing or redundant functionalities. 03) Friction points in the interaction. 04) Areas for interface optimisation. This pragmatic and user-centred approach allowed us to develop a technological solution highly adapted to the real needs of the market, maximising efficiency with minimal resources.",
+user: "In the absence of precise knowledge about our target market, we developed a research strategy based on the creation of protopersonas. Using the marketing department's preliminary sketches for future advertising campaigns, I designed a series of user profiles that encompassed the diversity of the agricultural ecosystem. These profiles covered a broad spectrum of farmers, from highly technical professionals to smallholders with limited technological know-how. The construction of these archetypes considered multiple dimensions, including technological farmers, who are managers of large farms with a high level of technological adoption, and traditional farmers, who are small rural landowners with basic knowledge and an interest in optimising their processes. In addition, we included home users, such as allotment and garden owners, who have a low level of technical knowledge but a strong interest in gardening and urban agriculture. The complexity was that our target audience was extremely diffuse, without a clear and precise definition, which forced us to create flexible and adaptable profiles that could capture the heterogeneity of the potential market.",
+process: "The design process for IoT Nexus was developed using an iterative, user-centric methodology, starting with brainstorming sessions to generate innovative ideas with the team. Initially, I developed detailed wireframes and blueprints to visualise the entire interaction process and detect potential friction points for the user. Using Figma, I created interactive prototypes representing the user journey, with specific navigation flows for each functionality. The various prototypes underwent constant iterations, adapting according to development goals and identified needs. A key element was the design system, where I established variables and design tokens in collaboration with the frontend team, ensuring that the web application was fully responsive and maintained visual and functional coherence. In parallel, I conducted usability tests with real users, whose feedback was crucial to continually adjust and refine the interface, ensuring that each iteration addressed concerns and improved the overall user experience.",
+prototype: {
+    description: "When I joined the project, I immediately proposed a Design Sprint, recognising the urgent need to validate the business hypotheses in a fast and economically efficient way. This methodology would allow us to obtain valuable insights in a short period of time, optimising resources and time. For the development of the interface, I opted for a design based on the Material Design standards for Angular. This strategic decision facilitated the creation of components highly compatible with the frontend framework used, ensuring a smooth integration and reducing the friction between design and development. In order to significantly improve data visualisation, I recommended the implementation of a library specialised in graphs and charts, which would allow us to present quantitative data in a more effective and visually appealing way, making it easier for users to interpret complex information. These proposals focused on optimising both the development process and the final user experience, seeking a balance between technical efficiency and usability.",
+    links: [
+    {
+        title: "Flow Zeplin Desktop",
+        url: "https://zpl.io/JEjOrKn"
+    },
+      // Resto de los links...
+    ]
+}
+};
+
+const imagePath = "/assets/IoTNexusAndroidBluetooth_ArielConde_ProductDesigner_2022.png";
+
+---
+
+<section class="py-16 sm:py-20">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-8 lg:gap-12">
+    <h2 class="text-lg font-medium tracking-tight sm:text-2xl">{caseStudy.summary}</h2>
+    <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
+        <div class="flex flex-col items-center justify-start gap-8">
+        <img src={imagePath} alt="Case Study Illustration" class="rounded-3xl object-cover w-full h-auto"/>
+        </div>
+        <div class="col-span-2 grid gap-8 sm:grid-cols-2">
+        <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+            <h3 class="text-xl font-medium">Goals</h3>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+            {caseStudy.goals}
+        </p>
+        </div>
+        <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+            <h3 class="text-xl font-medium">Research
+            </h3>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+            {caseStudy.ux} {caseStudy.ux2}
+            {caseStudy.ux3}
+            </p>
+        </div>
+        <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+            <h3 class="text-xl font-medium">User Definition
+            </h3>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+            {caseStudy.user}
+            </p>
+        </div>
+        <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+            <h3 class="text-xl font-medium">Design Process
+            </h3>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+            {caseStudy.process}
+            </p>
+        </div>
+        </div>
+    </div>
+    <div class="bg-secondary-100 dark:bg-secondary-900 rounded-3xl p-8 mt-8">
+        <h3 class="text-2xl font-bold mb-4">Proposed Solutions</h3>
+        <p class="text-primary-950/70 dark:text-primary-200/70 text-lg mb-6">
+        {caseStudy.prototype.description}
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {caseStudy.prototype.links.map((link) => (
+            <a 
+            href={link.url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="bg-primary-500 hover:bg-primary-600 text-white font-bold py-2 px-4 rounded inline-flex items-center transition duration-300"
+            >
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                class="w-5 h-5 mr-2"
+                stroke-width="1.5"
+            >
+                <path 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" 
+                />
+                <path 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" 
+                />
+            </svg>
+            <span>{link.title}</span>
+            </a>
+        ))}
+        </div>
+
+    </div>
+    </div>
+</div>
+</section>

@@ -1,0 +1,51 @@
+---
+const caseStudy = {
+  summary: "🚀 Important discoveries! Sometimes spending too much time on documentation can take your focus away. Rethinking the client's premise about attracting a younger audience was key to improving the user experience. Do you want to know more? 👀✨ #UX #Design #Learnings",
+  prototyp: "Methods used: Benchmarking. UX Analytics, Analysis of user engagement with Hotjar. Proto-persona by demographic segments. Key insights gained: A diverse audience of women who valued sustainability and product quality. Challenges were also identified such as lack of time, discrepancies in product images and doubts about sizes. In addition, the importance of an optimized shopping experience on mobile devices and a very active presence on social networks was highlighted.",
+  testing: "Testing methodology: usability tests were carried out with 6 real users using UX Proximal for tree testing. Key findings and adjustments made: Areas of confusion in the information architecture were identified, leading to reordering key sections of the site.",
+  prototype: {
+    description: "Increase the conversion rate in the online store and effectively communicate sustainability efforts",
+  }
+};
+
+
+const imagePath = "/assets/PeopleOfLeisure_MobileFirst_ArielConde_2021.webp";
+---
+
+<section class="py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-8 lg:gap-12">
+        <h2 class="text-lg font-medium tracking-tight sm:text-2xl">{caseStudy.summary}</h2>
+        <div class="grid gap-8 lg:grid-cols-3">
+          <!-- Columna de la imagen -->
+          <div class="flex items-center justify-center">
+            <img src={imagePath} alt="Case Study Illustration" class="rounded-3xl object-cover w-full h-full" />
+          </div>
+  
+          <!-- Columnas de contenido -->
+          <div class="col-span-2 grid gap-8 sm:grid-cols-2">
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+              <h3 class="text-xl font-medium">04 </h3>
+              <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+                Methods used: Benchmarking, UX Analytics, User behavior analysis with Hotjar. Proto-persona by demographic segments.
+                Key insights gained: A diverse audience of women who valued sustainability and product quality. Challenges such as lack of time, discrepancies in product images and doubts about sizes were also identified. In addition, the importance of an optimized shopping experience on mobile devices and a very active presence on social networks was highlighted.
+              </p>
+            </div>
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+              <h3 class="text-xl font-medium">Prototyping</h3>
+              <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+                {caseStudy.prototyp}
+              </p>
+            </div>
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8">
+              <h3 class="text-xl font-medium">User Testing</h3>
+              <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+                {caseStudy.testing}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

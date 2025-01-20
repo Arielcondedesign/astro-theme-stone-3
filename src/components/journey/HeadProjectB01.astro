@@ -1,0 +1,56 @@
+---
+const caseStudy = {
+  subtitle: "Bridging Innovation: Making IoT Accessible for All",
+  client: "IoT-Nexüs",
+  duration: "2+ Years",
+  role: "Product Designer",
+  intro: "One of the first questions I asked during the selection process for this project was whether this technology could be programmed using voice commands, just like Siri. I am passionate about devising solutions and thoroughly enjoy the effervescence of the creative process in its early stages. As a product designer, it is essential to take a strategic approach and adapt to each stage of development and market maturity. I am proud to have participated in this challenge. This version improves the clarity and flow of the text while maintaining the original message.",
+  summary: "IoT-Nexüs started as a solution to optimise smart irrigation and control soil moisture, but quickly evolved into a complete precision agriculture platform with multiple applications. The project was growing, evolving and scaling in the conceptualisation of different brands and that resulted in decentralising the core project developed in Angular to make vertical adaptations for both Android and IOS mobiles. IoT-Nexüs is a platform that integrates IoT technologies to optimise the interaction between farmers and their crops. Its purpose is to facilitate informed decisions through accurate and accessible data.",
+  challenge: "The main challenge for IoT Nexus was to transform complex quantitative data into meaningful and actionable qualitative information for users. The platform sought to translate technical metrics such as moisture values, soil pH, temperature and electrical conductivity into practical and intuitive recommendations that any farmer could quickly understand. This conversion process represented more than a simple translation of data: it was a strategy of technological democratisation that allowed users with different levels of technical knowledge to make informed decisions. The goal was to design an interface that would convert abstract numbers and graphs into clear messages such as ‘Soil needs irrigation’, ‘Optimal planting conditions’ or ‘Ideal time for fertilisation’, thus removing the barriers of technological complexity and making IoT information truly accessible and useful. Additionally, one of the crucial strategic challenges was to define a market entry strategy to effectively position the platform, which involved identifying initial agricultural segments, developing demonstrative use cases and establishing partnerships with early adopters who could validate and promote the technology solution, thus enabling a gradual but sustained adoption in the agricultural ecosystem."
+};
+
+const imagePath = "https://images.pexels.com/photos/3876417/pexels-photo-3876417.jpeg";
+---
+
+<section class="py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-8 lg:gap-12" id="iot-nexus">
+        <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">{caseStudy.subtitle}</h2>
+        <div class="grid gap-8 col-1 lg:grid-cols-3">
+            <div class="col-span-1 flex items-start">
+                <img 
+                  src={imagePath} 
+                  alt="Case Study Illustration" 
+                  class="rounded-3xl object-cover w-full h-auto" 
+                />
+              </div>
+              <div class="col-span-2 grid gap-8 sm:grid-cols-2">
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8 sm:col-span-2">
+              <h3 class="text-xl font-medium">Introduction</h3>
+              <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+                <strong>Client:</strong> {caseStudy.client}<br>
+                <strong>Duration:</strong> {caseStudy.duration}<br>
+                <strong>Role:</strong> {caseStudy.role}
+              </p>
+              <p class="text-primary-950/70 dark:text-primary-200/70 text-base mt-4">
+                {caseStudy.intro}
+              </p>
+            </div>
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8 sm:col-span-2">
+              <h3 class="text-xl font-medium">Summary of the project</h3>
+              <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+                {caseStudy.summary}
+              </p>
+            </div>
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8 sm:col-span-2">
+              <h3 class="text-xl font-medium">Challenge</h3>
+              <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+                {caseStudy.challenge}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

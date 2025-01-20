@@ -1,0 +1,55 @@
+---
+const caseStudy = {
+  subtitle: "E-commerce Redesign: Boosting Sales and Sustainability",
+  client: "People Of Leisure",
+  duration: "47 hours 52 minutes",
+  role: "UX/UI Designer",
+  intro: "One of the first questions I asked during the selection process for this project was whether this technology could be programmed using voice commands, just like Siri. I am passionate about devising solutions and thoroughly enjoy the effervescence of the creative process in its early stages. As a product designer, it is essential to take a strategic approach and adapt to each stage of development and market maturity. I am proud to have participated in this challenge. This version improves the clarity and flow of the text while maintaining the original message.",
+  summary: "The redesign project for People of Leisure was a comprehensive intervention of their e-commerce platform (Shopify), designed to revitalise their digital presence, improve the user experience and enhance their sustainability values. The main objective was to create an intuitive shopping experience that would emotionally connect with a young, environmentally conscious audience.",
+  challenge: "Despite the store's already solid sales performance, the owner sought to expand market share through a design renovation. This common retail sector assumption can be valid, as strategic redesigns can boost sales and attract new customers, even for successful businesses. Updated designs can enhance customer perception, optimize shopping experiences, and differentiate the store from competitors. However, it's crucial to base renovations on clear objectives and market data, not just assumptions. While a new design may attract more customers and increase short-term sales, sustained success depends on factors like product quality, customer service, and overall marketing strategy."
+};
+
+const imagePath = "/assets/PeopleOfLeisure_Intro_ArielConde_2021.webp";
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-8 lg:gap-12" id="pol-shopify">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">{caseStudy.subtitle}</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        <div class="col-span-2 grid gap-8 sm:grid-cols-2">
+          <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8 sm:col-span-2">
+            <h3 class="text-xl font-medium">Introduction</h3>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+              <strong>Client:</strong> {caseStudy.client}<br>
+              <strong>Duration:</strong> {caseStudy.duration}<br>
+              <strong>Role:</strong> {caseStudy.role}
+            </p>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base mt-4">
+              {caseStudy.intro}
+            </p>
+          </div>
+          <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8 sm:col-span-2">
+            <h3 class="text-xl font-medium">Summary of the project</h3>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+              {caseStudy.summary}
+            </p>
+          </div>
+          <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-4 rounded-3xl px-6 py-8 sm:col-span-2">
+            <h3 class="text-xl font-medium">Challenge</h3>
+            <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
+              {caseStudy.challenge}
+            </p>
+          </div>
+        </div>
+        <div class="col-span-1 flex items-start">
+          <img 
+            src={imagePath} 
+            alt="Case Study Illustration" 
+            class="rounded-3xl object-cover w-full h-auto lg:h-full" 
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
